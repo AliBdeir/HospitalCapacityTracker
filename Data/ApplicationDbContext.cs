@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HospitalBedSystem.Data
+namespace HospitalBedTracker.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

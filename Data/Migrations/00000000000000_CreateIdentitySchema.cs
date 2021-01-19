@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace HospitalBedSystem.Data.Migrations
+namespace HospitalBedTracker.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

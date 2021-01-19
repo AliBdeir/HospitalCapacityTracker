@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-HospitalBedSystem-20BB90D5-B600-4CF8-A941-E60F4E22ABD4")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-HospitalBedTracker-20BB90D5-B600-4CF8-A941-E60F4E22ABD4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("HospitalBedSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace HospitalBedSystem.Data.DataTypes
+namespace HospitalBedTracker.Data.DataTypes
 {
     public class BedType
     {

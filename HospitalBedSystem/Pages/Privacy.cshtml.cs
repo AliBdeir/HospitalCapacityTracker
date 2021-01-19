@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HospitalBedSystem.Pages
+namespace HospitalBedTracker.Pages
 {
     public class PrivacyModel : PageModel
     {

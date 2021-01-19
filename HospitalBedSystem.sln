@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{FD5B3FB9-1EC0-4857-B9DF-D01A813C9E85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBedSystem", "HospitalBedSystem\HospitalBedSystem.csproj", "{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBedTracker", "HospitalBedSystem\HospitalBedTracker.csproj", "{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
