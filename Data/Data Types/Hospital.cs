@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,11 +7,8 @@ using System.Text;
 
 namespace HospitalBedTracker.Data.DataTypes
 {
-    public class Hospital
+    public class Hospital : IdentityUser
     {
-        [Key]
-        public int HospitalId { get; set; }
-
         [MaxLength(64)]
         [Required]
         public string Name { get; set; }
@@ -18,6 +16,6 @@ namespace HospitalBedTracker.Data.DataTypes
         [Required]
         public string Address { get; set; }
 
-        public List<HospitalBedSection> HospitalBedSection { get; set; }
+        public List<HospitalBedSection> HospitalBedSections { get; set; }
     }
 }
