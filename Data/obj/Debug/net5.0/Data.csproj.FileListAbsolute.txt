@@ -1,0 +1,12 @@
+C:\Users\MSE\source\repos\BedSystemCorona\Data\bin\Debug\net5.0\Data.deps.json
+C:\Users\MSE\source\repos\BedSystemCorona\Data\bin\Debug\net5.0\Data.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Data\bin\Debug\net5.0\ref\Data.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Data\bin\Debug\net5.0\Data.pdb
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.csprojAssemblyReference.cache
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.AssemblyInfoInputs.cache
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.AssemblyInfo.cs
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\ref\Data.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.pdb

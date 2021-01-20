@@ -12,9 +12,13 @@ namespace HospitalBedTracker.Data.DataTypes
         [MaxLength(64)]
         [Required]
         public string Name { get; set; }
+
         [MaxLength(256)]
         [Required]
         public string Address { get; set; }
+
+        [Required]
+        public bool AdministratorAccount { get; set; } = false;
 
         public List<HospitalBedSection> HospitalBedSections { get; set; }
     }
