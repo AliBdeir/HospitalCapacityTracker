@@ -17,6 +17,8 @@ namespace HospitalBedTracker.Data.DataTypes
         [Required]
         public string Address { get; set; }
 
+        public string GoogleMapsLink { get; set; }
+
         [Required]
         public bool AdministratorAccount { get; set; } = false;
 

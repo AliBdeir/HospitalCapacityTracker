@@ -12,10 +12,7 @@ namespace HospitalBedTracker.Data
         public DbSet<Hospital> Hospitals { get; set; }
         public DbSet<BedType> BedTypes { get; set; }
         public DbSet<HospitalBedSection> HospitalBedSections { get; set; }
-        public ApplicationDbContext()
-        {
 
-        }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

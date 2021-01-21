@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HospitalBedTracker.Data;
+using HospitalBedTracker.Data.DataTypes;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,16 +13,22 @@ namespace HospitalBedTracker.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<IndexModel> logger;
+        private readonly ApplicationDbContext db;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        #region Properties
+        [ViewData]
+        public List<Hospital> Hospitals { get; set; } = new List<Hospital>();
+        #endregion
+
+        public IndexModel(ILogger<IndexModel> logger, ApplicationDbContext context)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.db = context;
         }
 
-        public void OnGet()
-        {
-
+        public async Task OnGetAsync() {
+            this.Hospitals = db.Hospitals.ToList();
         }
     }
 }

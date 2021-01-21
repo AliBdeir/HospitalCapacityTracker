@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{FD5B3FB9-1EC0-4857-B9DF-D01A813C9E85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBedTracker", "HospitalBedSystem\HospitalBedTracker.csproj", "{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalBedTracker", "HospitalBedSystem\HospitalBedTracker.csproj", "{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "ContentLocalization\Localization.csproj", "{372439B4-AE69-4F3A-B564-485AE28E309A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{372439B4-AE69-4F3A-B564-485AE28E309A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372439B4-AE69-4F3A-B564-485AE28E309A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372439B4-AE69-4F3A-B564-485AE28E309A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372439B4-AE69-4F3A-B564-485AE28E309A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
