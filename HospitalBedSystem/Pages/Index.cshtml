@@ -3,11 +3,16 @@
 @inject IHtmlLocalizer<IndexModel> htmlLocalizer;
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
+@using HospitalBedTracker.Data.DataTypes;
 @model IndexModel
 @{
     ViewData["Title"] = localizer["HomePage"];
     var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
     var requestCulture = requestCultureFeature.RequestCulture;
+}
+
+@section Styles {
+    <link href="~/css/index.css" rel="stylesheet" type="text/css" />
 }
 
 <div class="text-center">
@@ -17,35 +22,23 @@
 
 <div class="text-center">
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-    <table class="table culture-table">
-        <tr>
-            <td style="width:50%;">Culture</td>
-            <td>@requestCulture.Culture.DisplayName {@requestCulture.Culture.Name}</td>
-        </tr>
-        <tr>
-            <td>UI Culture</td>
-            <td>@requestCulture.UICulture.Name</td>
-        </tr>
-        <tr>
-            <td>UICulture Parent</td>
-            <td>@requestCulture.UICulture.Parent</td>
-        </tr>
-        <tr>
-            <td>Date</td>
-            <td>@DateTime.Now.ToLongDateString()</td>
-        </tr>
-        <tr>
-            <td>Currency</td>
-            <td>
-                @(12345.00.ToString("c"))
-            </td>
-        </tr>
-        <tr>
-            <td>Number</td>
-            <td>
-                @(123.45m.ToString("F2"))
-            </td>
-        </tr>
-    </table>
+    @foreach (var item in (List<Hospital>)ViewData["Hospitals"])
+    {
+        <div class="card hospitalCard" style="max-width: 26rem;">
+            <img src="@item.HospitalImageUrl" class="card-img-top">
+            <div class="card-body cardBodyMargined">
+                <h5 class="card-title">Hospital Name</h5>
+                <p class="card-text">Hadath St. Therese - Mafrak Kassab - Mafrak Saidaliyyet Zein.</p>
+                <div class="bedsBlock">
+                    <ul class="list-group list-group-horizontal bedsList">
+                        <li class="list-group-item">
+                            <h4 class="number">99999</h4>
+                            <text class="bedType">ICU</text>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary">Open in Google Maps</a>
+            </div>
+        </div>
+    }
 </div>
