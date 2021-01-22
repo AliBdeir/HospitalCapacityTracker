@@ -314,6 +314,9 @@
           "HospitalBedTracker.dll": {}
         },
         "resources": {
+          "ar/HospitalBedTracker.resources.dll": {
+            "locale": "ar"
+          },
           "en/HospitalBedTracker.resources.dll": {
             "locale": "en"
           }
@@ -1936,6 +1939,7 @@
       },
       "Data/1.0.0": {
         "dependencies": {
+          "Localization": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.2"
         },

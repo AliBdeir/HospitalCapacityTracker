@@ -4,14 +4,14 @@
     "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj": {
+    "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\ContentLocalization\\Localization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj",
-        "projectName": "Data",
-        "projectPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\ContentLocalization\\Localization.csproj",
+        "projectName": "Localization",
+        "projectPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\ContentLocalization\\Localization.csproj",
         "packagesPath": "C:\\Users\\MSE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\obj\\",
+        "outputPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\ContentLocalization\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -45,6 +45,73 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\MSE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.emzi0767.com/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\ContentLocalization\\Localization.csproj": {
+                "projectPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\ContentLocalization\\Localization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -66,6 +133,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

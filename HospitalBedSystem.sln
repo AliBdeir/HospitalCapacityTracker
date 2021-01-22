@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalBedTracker", "HospitalBedSystem\HospitalBedTracker.csproj", "{E06875AB-8E26-4DE4-B23C-91CCA30F9F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "ContentLocalization\Localization.csproj", "{372439B4-AE69-4F3A-B564-485AE28E309A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localization", "ContentLocalization\Localization.csproj", "{372439B4-AE69-4F3A-B564-485AE28E309A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

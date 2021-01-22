@@ -13,6 +13,12 @@ namespace HospitalBedTracker.Data
         public DbSet<BedType> BedTypes { get; set; }
         public DbSet<HospitalBedSection> HospitalBedSections { get; set; }
 
+        #region Localization
+        public DbSet<HospitalName> HospitalNames { get; set; }
+        public DbSet<HospitalAddress> HospitalAddresses { get; set; }
+        public DbSet<BedTypeName> BedTypeNames { get; set; }
+        #endregion
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

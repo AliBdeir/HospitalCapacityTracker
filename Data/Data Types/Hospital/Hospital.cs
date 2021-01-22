@@ -7,18 +7,16 @@ using System.Text;
 
 namespace HospitalBedTracker.Data.DataTypes
 {
+    
     public class Hospital : IdentityUser
     {
-        [MaxLength(64)]
-        [Required]
-        public string Name { get; set; }
+        public List<HospitalName> HospitalNames { get; set; }
+        public List<HospitalAddress> HospitalAddresses { get; set; }
 
-        [MaxLength(256)]
-        [Required]
-        public string Address { get; set; }
-
+        [MaxLength(2048)]
         public string GoogleMapsUrl { get; set; }
 
+        [MaxLength(2048)]
         public string HospitalImageUrl { get; set; }
 
         [Required]

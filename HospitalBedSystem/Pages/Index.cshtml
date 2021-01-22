@@ -4,11 +4,35 @@
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
 @using HospitalBedTracker.Data.DataTypes;
+@using Localization;
 @model IndexModel
 @{
     ViewData["Title"] = localizer["HomePage"];
     var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
-    var requestCulture = requestCultureFeature.RequestCulture;
+    RequestCulture requestCulture = requestCultureFeature.RequestCulture;
+    List<Hospital> hospitals = (List<Hospital>)ViewData["Hospitals"];
+    string GetCapacityClass(int current, int max)
+    {
+        double occupation = (current / (double)max);
+        string result = "high";
+        if (occupation == 1)
+        {
+            result = "no";
+        }
+        else if (occupation >= 0.66)
+        {
+            result = "low";
+        }
+        else if (occupation >= 0.33)
+        {
+            result = "medium";
+        }
+        else
+        {
+            result = "high";
+        }
+        return result + "-capacity";
+    }
 }
 
 @section Styles {
@@ -22,19 +46,23 @@
 
 <div class="text-center">
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    @foreach (var item in (List<Hospital>)ViewData["Hospitals"])
+    @foreach (var hospital in hospitals)
     {
         <div class="card hospitalCard" style="max-width: 26rem;">
-            <img src="@item.HospitalImageUrl" class="card-img-top">
+            <img src="@hospital.HospitalImageUrl" class="card-img-top">
             <div class="card-body cardBodyMargined">
-                <h5 class="card-title">Hospital Name</h5>
-                <p class="card-text">Hadath St. Therese - Mafrak Kassab - Mafrak Saidaliyyet Zein.</p>
+                <h5 class="card-title">@hospital.HospitalNames.LocalizationOrDefault(requestCulture)</h5>
+                <p class="card-text">@hospital.HospitalAddresses.LocalizationOrDefault(requestCulture)</p>
                 <div class="bedsBlock">
                     <ul class="list-group list-group-horizontal bedsList">
-                        <li class="list-group-item">
-                            <h4 class="number">99999</h4>
-                            <text class="bedType">ICU</text>
-                        </li>
+                        @foreach (HospitalBedSection item in hospital.HospitalBedSections)
+                        {
+                            var capacityClass = GetCapacityClass(item.CurrentOccupation, item.MaxCapacity);
+                            <li class="list-group-item">
+                                <h4 class="number @capacityClass">@item.CurrentOccupation</h4>
+                                <text class="bedType @capacityClass">@item.MaxCapacity</text>
+                            </li>
+                        }
                     </ul>
                 </div>
                 <a href="#" class="btn btn-primary">Open in Google Maps</a>

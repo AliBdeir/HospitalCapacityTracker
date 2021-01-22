@@ -3,10 +3,6 @@
     margin: 12px;
 }
 
-.number {
-    color: brown;
-}
-
 text.bedType {
     color: chocolate;
     font-size: large;
@@ -27,4 +23,24 @@ div.cardBodyMargined {
 
 ul.bedsList {
     overflow: auto;
+}
+
+h4.number {
+    line-height: 0.6rem;
+}
+
+.high-capacity {
+    color: green;
+}
+
+.medium-capacity {
+    color: orangered;
+}
+
+.low-capacity {
+    color: red;
+}
+
+.no-capacity {
+    color: firebrick;
 }
