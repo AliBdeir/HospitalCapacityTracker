@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalBedTracker.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210127092344_Made HospitalID a string")]
-    partial class MadeHospitalIDastring
+    [Migration("20210127150253_Values")]
+    partial class Values
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,9 +42,6 @@ namespace HospitalBedTracker.Data.Migrations
 
                     b.Property<int>("BedTypeId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("Default")
-                        .HasColumnType("bit");
 
                     b.Property<string>("LanguageISO")
                         .IsRequired()
@@ -146,9 +143,6 @@ namespace HospitalBedTracker.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<bool>("Default")
-                        .HasColumnType("bit");
-
                     b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");
 
@@ -203,9 +197,6 @@ namespace HospitalBedTracker.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<bool>("Default")
-                        .HasColumnType("bit");
 
                     b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");

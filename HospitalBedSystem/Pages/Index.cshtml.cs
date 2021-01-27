@@ -29,7 +29,12 @@ namespace HospitalBedTracker.Pages
         }
 
         public async Task OnGetAsync() {
-            this.Hospitals = db.Hospitals.Include(x => x.HospitalNames).Include(x => x.HospitalAddresses).Include(x => x.HospitalBedSections).ToList();
+            this.Hospitals = db.Hospitals
+                .Include(x => x.HospitalNames)
+                .Include(x => x.HospitalAddresses)
+                .Include(x => x.HospitalBedSections)
+                .ThenInclude(x => x.BedCategory.BedTypeNames)
+                .ToList();
         }
     }
 }

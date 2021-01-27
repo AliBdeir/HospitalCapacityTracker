@@ -20,8 +20,5 @@ namespace HospitalBedTracker.Data.DataTypes
         [Required]
         public virtual string Text { get; set; }
 
-        [Required]
-        public bool Default { get; set; } = false;
-
     }
 }

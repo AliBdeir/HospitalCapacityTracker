@@ -15,21 +15,21 @@
     {
         double occupation = (current / (double)max);
         string result = "high";
-        if (occupation == 1)
+        if (occupation == 1 || occupation >= 0.75)
         {
-            result = "no";
+            result = "high";
         }
         else if (occupation >= 0.66)
         {
-            result = "low";
+            result = "medium";
         }
         else if (occupation >= 0.33)
         {
-            result = "medium";
+            result = "low";
         }
         else
         {
-            result = "high";
+            result = "no";
         }
         return result + "-capacity";
     }
@@ -37,13 +37,7 @@
 @section head {
     <link href="~/css/index.css" rel="stylesheet" type="text/css" />
 }
-<div class="text-center">
-    <h1 class="display-4">@localizer["Welcome"]</h1>
-    <p>@htmlLocalizer["Learn"]</p>
-</div>
-
-<div class="text-center">
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
     @foreach (var hospital in hospitals)
     {
         <div class="card hospitalCard" style="max-width: 26rem;">
@@ -57,8 +51,8 @@
                         {
                             var capacityClass = GetCapacityClass(item.CurrentOccupation, item.MaxCapacity);
                             <li class="list-group-item">
-                                <h4 class="number @capacityClass">@item.CurrentOccupation</h4>
-                                <text class="bedType @capacityClass">@item.MaxCapacity</text>
+                                <h5 class="bedType @capacityClass">@(item.BedCategory.BedTypeNames.LocalizationOrDefault(requestCulture))</h5>
+                                <h4 class="number @capacityClass">@item.CurrentOccupation</h4> / <text class="@capacityClass">@item.MaxCapacity</text>
                             </li>
                         }
                     </ul>

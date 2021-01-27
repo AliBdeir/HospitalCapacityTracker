@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HospitalBedTracker.Data.Migrations
 {
-    public partial class MadeHospitalIDastring : Migration
+    public partial class Values : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -175,7 +175,6 @@ namespace HospitalBedTracker.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Text = table.Column<string>(type: "nvarchar(512)", maxLength: 512, nullable: false),
                     LanguageISO = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
-                    Default = table.Column<bool>(type: "bit", nullable: false),
                     HospitalId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
@@ -197,7 +196,6 @@ namespace HospitalBedTracker.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Text = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
                     LanguageISO = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
-                    Default = table.Column<bool>(type: "bit", nullable: false),
                     HospitalId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
@@ -219,8 +217,7 @@ namespace HospitalBedTracker.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BedTypeId = table.Column<int>(type: "int", nullable: false),
                     Text = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    LanguageISO = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
-                    Default = table.Column<bool>(type: "bit", nullable: false)
+                    LanguageISO = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false)
                 },
                 constraints: table =>
                 {

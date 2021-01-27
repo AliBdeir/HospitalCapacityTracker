@@ -26,6 +26,7 @@
         <div id="cards" class="d-flex flex-row justify-content-center">
             @for (int i = 0; i < 6; i++)
             {
+                HospitalBedSection value = sections.ElementAtOrDefault(i);
                 <div class="category">
                     @{int l = 0;}
                     @foreach (var lang in supportedLanguages)
@@ -33,16 +34,19 @@
                         <div class="form-group">
                             <label for="category_@lang@i">@localizer["SectionName"] [@lang]</label>
                             <input type="text" class="form-control" id="category_@lang@i" placeholder="@localizer["SectionName"]"
-                                   name="NewSections[@i].BedCategory.BedTypeNames[@l].Text">
+                                   name="NewSections[@i].BedCategory.BedTypeNamesDict[@lang]"
+                                   value="@(value?.BedCategory.BedTypeNames.LocalizationOrDefault(lang))">
                         </div>
                         l++;
                     }
                     <div class="form-group occupation">
                         <input min="0" class="occupation" id="currentOccupation(@i)" type="number" placeholder="@localizer["Current"]"
-                               name="NewSections[@i].CurrentOccupation" />
+                               name="NewSections[@i].CurrentOccupation"
+                               value="@(value?.CurrentOccupation)" />
                         <text>/</text>
-                        <input min="0" class="occupation" id="capacity(@i)" type="number" placeholder="@localizer["Max"]"
-                               name="NewSections[@i].MaxCapacity"/>
+                        <input min="1" step="1" class="occupation" id="capacity(@i)" type="number" placeholder="@localizer["Max"]"
+                               name="NewSections[@i].MaxCapacity"
+                               value="@(value?.MaxCapacity)"/>
                     </div>
                 </div>
                 <br />

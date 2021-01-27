@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Xml;
 
 namespace HospitalBedTracker.Data.DataTypes
 {
@@ -17,6 +19,9 @@ namespace HospitalBedTracker.Data.DataTypes
     {
         [Key]
         public int BedCategoryId { get; set; }
-        public List<BedTypeName> BedTypeNames { get; set; }
+        public List<BedTypeName> BedTypeNames { get; set; } = new();
+
+        [NotMapped]
+        public Dictionary<string, string> BedTypeNamesDict { get; set; } = new();
     }
 }

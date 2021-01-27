@@ -41,9 +41,6 @@ namespace HospitalBedTracker.Data.Migrations
                     b.Property<int>("BedTypeId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Default")
-                        .HasColumnType("bit");
-
                     b.Property<string>("LanguageISO")
                         .IsRequired()
                         .HasMaxLength(5)
@@ -144,9 +141,6 @@ namespace HospitalBedTracker.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<bool>("Default")
-                        .HasColumnType("bit");
-
                     b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");
 
@@ -201,9 +195,6 @@ namespace HospitalBedTracker.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<bool>("Default")
-                        .HasColumnType("bit");
 
                     b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");
