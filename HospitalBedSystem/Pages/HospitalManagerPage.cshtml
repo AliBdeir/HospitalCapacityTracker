@@ -1,5 +1,56 @@
 ﻿@page
+@inject IStringLocalizer<HospitalManagerPageModel> localizer
+@inject IHtmlLocalizer<HospitalManagerPageModel> htmlLocalizer;
+@inject CommonLocalizationService cLocalizer
+@using Localization.Services;
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using HospitalBedTracker.Data.DataTypes;
+@using Localization;
+@using Globals;
 @model HospitalBedTracker.Pages.HospitalManagerPageModel
 @{
-
+    ViewData["Title"] = localizer["HomePage"];
+    var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+    RequestCulture requestCulture = requestCultureFeature.RequestCulture;
+    string[] supportedLanguages = Configuration.SupportedLanguages.Select(x => x.TwoLetterISOLanguageName).ToArray();
 }
+@section head{
+    <link rel="stylesheet" href="~/css/hospitalManagerPage.css" />
+}
+
+<div class="container">
+
+    <form method="post">
+        @{List<HospitalBedSection> sections = (List<HospitalBedSection>)ViewData["BedSections"];}
+        <div id="cards" class="d-flex flex-row justify-content-center">
+            @for (int i = 0; i < 6; i++)
+            {
+                <div class="category">
+                    @{int l = 0;}
+                    @foreach (var lang in supportedLanguages)
+                    {
+                        <div class="form-group">
+                            <label for="category_@lang@i">@localizer["SectionName"] [@lang]</label>
+                            <input type="text" class="form-control" id="category_@lang@i" placeholder="@localizer["SectionName"]"
+                                   name="NewSections[@i].BedCategory.BedTypeNames[@l].Text">
+                        </div>
+                        l++;
+                    }
+                    <div class="form-group occupation">
+                        <input min="0" class="occupation" id="currentOccupation(@i)" type="number" placeholder="@localizer["Current"]"
+                               name="NewSections[@i].CurrentOccupation" />
+                        <text>/</text>
+                        <input min="0" class="occupation" id="capacity(@i)" type="number" placeholder="@localizer["Max"]"
+                               name="NewSections[@i].MaxCapacity"/>
+                    </div>
+                </div>
+                <br />
+            }
+            <br />
+        </div>
+        <div style="width: 100%" class="d-flex flex-row justify-content-center">
+            <button type="submit" class="btn btn-primary" style="width: 80%">Submit</button>
+        </div>
+    </form>
+</div>

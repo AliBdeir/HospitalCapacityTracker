@@ -15,3 +15,6 @@ C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.csproj.Copy
 C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.dll
 C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\ref\Data.dll
 C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.pdb
+C:\Users\MSE\source\repos\BedSystemCorona\Data\bin\Debug\net5.0\Data.runtimeconfig.json
+C:\Users\MSE\source\repos\BedSystemCorona\Data\bin\Debug\net5.0\Data.runtimeconfig.dev.json
+C:\Users\MSE\source\repos\BedSystemCorona\Data\obj\Debug\net5.0\Data.genruntimeconfig.cache

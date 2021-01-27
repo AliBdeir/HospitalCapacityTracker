@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Localization
 {
@@ -47,6 +45,10 @@ namespace Localization
             string iso,
             bool emptyIfNone = true) where T : LocalizedText
         {
+            if (ts == null)
+            {
+                throw new ArgumentNullException(nameof(ts));
+            }
             string result = ts.SingleOrDefault(x => x.LanguageISO.ToLower() == iso.ToLower())?.Text;
             if (result == default)
             {
@@ -59,5 +61,14 @@ namespace Localization
             }
             return result;
         }
+
+        public static IEnumerable<T> ToLT<T>(this Dictionary<string,string> values) where T : LocalizedText, new()
+        {
+            foreach (var kvp in values)
+            {
+                yield return new () { LanguageISO = kvp.Key, Text = kvp.Value };
+            }
+        }
+
     }
 }

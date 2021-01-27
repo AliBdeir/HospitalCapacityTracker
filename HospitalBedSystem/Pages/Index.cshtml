@@ -1,5 +1,5 @@
 ﻿@page
-@inject IStringLocalizer<IndexModel> localizer
+@inject IStringLocalizer<IndexModel> localizer;
 @inject IHtmlLocalizer<IndexModel> htmlLocalizer;
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -34,11 +34,9 @@
         return result + "-capacity";
     }
 }
-
-@section Styles {
+@section head {
     <link href="~/css/index.css" rel="stylesheet" type="text/css" />
 }
-
 <div class="text-center">
     <h1 class="display-4">@localizer["Welcome"]</h1>
     <p>@htmlLocalizer["Learn"]</p>

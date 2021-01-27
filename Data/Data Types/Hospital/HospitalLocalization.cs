@@ -9,7 +9,7 @@ namespace HospitalBedTracker.Data.DataTypes
 {
     public abstract class HospitalLocalization : LocalizedText
     {
-        public int HospitalId { get; set; }
+        public string HospitalId { get; set; }
     }
     public class HospitalName : HospitalLocalization
     {

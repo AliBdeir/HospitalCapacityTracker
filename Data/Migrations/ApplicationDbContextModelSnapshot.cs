@@ -41,6 +41,9 @@ namespace HospitalBedTracker.Data.Migrations
                     b.Property<int>("BedTypeId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Default")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LanguageISO")
                         .IsRequired()
                         .HasMaxLength(5)
@@ -141,10 +144,10 @@ namespace HospitalBedTracker.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("HospitalId")
-                        .HasColumnType("int");
+                    b.Property<bool>("Default")
+                        .HasColumnType("bit");
 
-                    b.Property<string>("HospitalId1")
+                    b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LanguageISO")
@@ -159,7 +162,7 @@ namespace HospitalBedTracker.Data.Migrations
 
                     b.HasKey("LocalizedTextId");
 
-                    b.HasIndex("HospitalId1");
+                    b.HasIndex("HospitalId");
 
                     b.ToTable("HospitalAddresses");
                 });
@@ -177,10 +180,7 @@ namespace HospitalBedTracker.Data.Migrations
                     b.Property<int>("CurrentOccupation")
                         .HasColumnType("int");
 
-                    b.Property<int>("HospitalId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("HospitalId1")
+                    b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("MaxCapacity")
@@ -190,7 +190,7 @@ namespace HospitalBedTracker.Data.Migrations
 
                     b.HasIndex("BedCategoryId");
 
-                    b.HasIndex("HospitalId1");
+                    b.HasIndex("HospitalId");
 
                     b.ToTable("HospitalBedSections");
                 });
@@ -202,10 +202,10 @@ namespace HospitalBedTracker.Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("HospitalId")
-                        .HasColumnType("int");
+                    b.Property<bool>("Default")
+                        .HasColumnType("bit");
 
-                    b.Property<string>("HospitalId1")
+                    b.Property<string>("HospitalId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LanguageISO")
@@ -220,7 +220,7 @@ namespace HospitalBedTracker.Data.Migrations
 
                     b.HasKey("LocalizedTextId");
 
-                    b.HasIndex("HospitalId1");
+                    b.HasIndex("HospitalId");
 
                     b.ToTable("HospitalNames");
                 });
@@ -373,7 +373,7 @@ namespace HospitalBedTracker.Data.Migrations
                 {
                     b.HasOne("HospitalBedTracker.Data.DataTypes.Hospital", null)
                         .WithMany("HospitalAddresses")
-                        .HasForeignKey("HospitalId1");
+                        .HasForeignKey("HospitalId");
                 });
 
             modelBuilder.Entity("HospitalBedTracker.Data.DataTypes.HospitalBedSection", b =>
@@ -386,7 +386,7 @@ namespace HospitalBedTracker.Data.Migrations
 
                     b.HasOne("HospitalBedTracker.Data.DataTypes.Hospital", "Hospital")
                         .WithMany("HospitalBedSections")
-                        .HasForeignKey("HospitalId1");
+                        .HasForeignKey("HospitalId");
 
                     b.Navigation("BedCategory");
 
@@ -397,7 +397,7 @@ namespace HospitalBedTracker.Data.Migrations
                 {
                     b.HasOne("HospitalBedTracker.Data.DataTypes.Hospital", null)
                         .WithMany("HospitalNames")
-                        .HasForeignKey("HospitalId1");
+                        .HasForeignKey("HospitalId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

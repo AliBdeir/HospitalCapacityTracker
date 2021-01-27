@@ -1,17 +1,24 @@
 ﻿@page
+@inject IStringLocalizer<RegisterModel> localizer;
+@inject IHtmlLocalizer<RegisterModel> htmlLocalizer;
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization; 
+@using Localization;
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
+    var languages = Globals.Configuration.SupportedLanguages.Select(x => x.TwoLetterISOLanguageName);
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
+<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <h4>Create a new account.</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />
@@ -28,39 +35,46 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
-        </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Use another service to register.</h4>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+        </div>
+        <div class="col-lg">
+            <section>
+                @foreach (var availableLanguage in languages)
                 {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
+                    var id = $"hospitalName_{availableLanguage}";
+                    <div class="mb-3">
+                        <label for="@id" class="form-label">@localizer["HospitalName"] [@availableLanguage.ToUpper()]</label>
+                        <input type="text" class="form-control" placeholder="@localizer["HospitalName"] [@availableLanguage]" id="@id"
+                               name="HospitalNames[@availableLanguage]" required />
                     </div>
                 }
-                else
+                <hr />
+                @foreach (var availableLanguage in languages)
                 {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
+                    var id = $"hospitalAddress_{availableLanguage}";
+                    <div class="mb-3">
+                        <label for="@id" class="form-label">@localizer["HospitalAddress"] [@availableLanguage.ToUpper()]</label>
+                        <input type="text" class="form-control" placeholder="@localizer["HospitalAddress"] [@availableLanguage]" id="@id"
+                               name="HospitalAddresses[@availableLanguage]" required />
+                    </div>
                 }
-            }
-        </section>
+                <hr />
+                <div class="mb-3">
+                    <label for="googleMapsURL" class="form-label">@localizer["GoogleMapsURL"]</label>
+                    <input type="url" class="form-control" id="googleMapsURL" name="Hospital.GoogleMapsUrl" />
+                </div>
+                <div class="mb-3">
+                    <label for="hospitalImageUrl" class="form-label">@localizer["HospitalImageUrl"]</label>
+                    <input type="url" class="form-control" id="hospitalImageUrl" name="Hospital.HospitalImageUrl" />
+                </div>
+                @*<div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>*@
+            </section>
+        </div>
     </div>
-</div>
+</form>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

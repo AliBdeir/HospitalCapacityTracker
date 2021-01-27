@@ -43,7 +43,7 @@ namespace HospitalBedTracker
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<Hospital>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<Hospital>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
             services.AddSingleton<CommonLocalizationService>();

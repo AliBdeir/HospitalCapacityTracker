@@ -16,7 +16,7 @@ namespace HospitalBedTracker.Data.DataTypes
         public int BedCategoryId { get; set; }
         public BedType BedCategory { get; set; }
 
-        public int HospitalId { get; set; }
+        public string HospitalId { get; set; }
         public Hospital Hospital { get; set; }
     }
 }

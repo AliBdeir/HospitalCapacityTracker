@@ -10,8 +10,8 @@ namespace HospitalBedTracker.Data.DataTypes
     
     public class Hospital : IdentityUser
     {
-        public List<HospitalName> HospitalNames { get; set; }
-        public List<HospitalAddress> HospitalAddresses { get; set; }
+        public List<HospitalName> HospitalNames { get; set; } = new();
+        public List<HospitalAddress> HospitalAddresses { get; set; } = new();
 
         [MaxLength(2048)]
         public string GoogleMapsUrl { get; set; }
@@ -22,6 +22,6 @@ namespace HospitalBedTracker.Data.DataTypes
         [Required]
         public bool AdministratorAccount { get; set; } = false;
 
-        public List<HospitalBedSection> HospitalBedSections { get; set; }
+        public List<HospitalBedSection> HospitalBedSections { get; set; } = new();
     }
 }

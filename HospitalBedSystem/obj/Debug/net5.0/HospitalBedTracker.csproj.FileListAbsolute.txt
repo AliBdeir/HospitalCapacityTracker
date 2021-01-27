@@ -138,8 +138,6 @@ C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\bin\Debug\net5.0\Glo
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.csprojAssemblyReference.cache
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.CommonResources.ar.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.CommonResources.en.resources
-C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.CommonResources.ar.resources
-C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.CommonResources.en.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.HospitalManagerPageModel.ar.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.HospitalManagerPageModel.en.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.IndexModel.ar.resources
@@ -186,3 +184,5 @@ C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Hos
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\ref\HospitalBedTracker.dll
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.pdb
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.genruntimeconfig.cache
+C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.RegisterPageModel.ar.resources
+C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.RegisterPageModel.en.resources

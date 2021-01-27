@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Localization;
 
 namespace HospitalBedTracker.Areas.Identity.Pages.Account
 {
@@ -24,6 +25,15 @@ namespace HospitalBedTracker.Areas.Identity.Pages.Account
         private readonly UserManager<Hospital> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+
+        [BindProperty]
+        public Dictionary<string, string> HospitalNames { get; set; }
+
+        [BindProperty]
+        public Dictionary<string, string> HospitalAddresses { get; set; }
+
+        [BindProperty]
+        public Hospital Hospital { get; set; } = new Hospital();
 
         public RegisterModel(
             UserManager<Hospital> userManager,
@@ -75,7 +85,11 @@ namespace HospitalBedTracker.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new Hospital { UserName = Input.Email, Email = Input.Email };
+                var user = Hospital;
+                user.UserName = Input.Email;
+                user.Email = Input.Email;
+                user.HospitalAddresses = this.HospitalAddresses.ToLT<HospitalAddress>().ToList();
+                user.HospitalNames = this.HospitalNames.ToLT<HospitalName>().ToList();
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
@@ -86,7 +100,7 @@ namespace HospitalBedTracker.Areas.Identity.Pages.Account
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",
                         pageHandler: null,
-                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                        values: new { area = "Identity", userId = user.Id, code, returnUrl },
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",

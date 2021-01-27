@@ -2,6 +2,7 @@
 using HospitalBedTracker.Data.DataTypes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace HospitalBedTracker.Pages
         }
 
         public async Task OnGetAsync() {
-            this.Hospitals = db.Hospitals.ToList();
+            this.Hospitals = db.Hospitals.Include(x => x.HospitalNames).Include(x => x.HospitalAddresses).Include(x => x.HospitalBedSections).ToList();
         }
     }
 }
