@@ -9,7 +9,15 @@
       "DEBUG",
       "NET",
       "NET5_0",
-      "NETCOREAPP"
+      "NETCOREAPP",
+      "NET5_0_OR_GREATER",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER",
+      "NETCOREAPP3_0_OR_GREATER",
+      "NETCOREAPP3_1_OR_GREATER"
     ],
     "languageVersion": "9.0",
     "platform": "",
@@ -26,6 +34,7 @@
       "HospitalBedTracker/1.0.0": {
         "dependencies": {
           "Data": "1.0.0",
+          "Globals": "1.0.0",
           "Localization": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2",
@@ -1948,6 +1957,14 @@
         },
         "compile": {
           "Data.dll": {}
+        }
+      },
+      "Globals/1.0.0": {
+        "runtime": {
+          "Globals.dll": {}
+        },
+        "compile": {
+          "Globals.dll": {}
         }
       },
       "Localization/1.0.0": {
@@ -4554,6 +4571,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Globals/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

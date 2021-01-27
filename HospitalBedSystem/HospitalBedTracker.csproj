@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ContentLocalization\Localization.csproj" />
     <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Globals\Globals.csproj" />
   </ItemGroup>
 
   <ItemGroup>

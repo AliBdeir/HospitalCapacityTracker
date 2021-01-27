@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Nf5MrQGzqJnMSsqL8v9Hx4EB8+NklLqzRwDSIxClaGe2gGD15+35MoDOKT9NatS+XRa9iHKH1ESqlO4oVqrVCA==",
+  "dgSpecHash": "X0/C3hp75lykpu8XyNUZu2D4HAMU2U+vg6xCUzIjyHkJ0KzqnFp8uoiluQpGJLk64J9wNmBZw2yXIJ5bHaMENg==",
   "success": true,
   "projectFilePath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\HospitalBedSystem\\HospitalBedTracker.csproj",
   "expectedPackageFiles": [
@@ -62,7 +62,7 @@
     "C:\\Users\\MSE\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.1\\microsoft.visualstudio.web.codegenerators.mvc.5.0.1.nupkg.sha512",
     "C:\\Users\\MSE\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\MSE\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\MSE\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\MSE\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\MSE\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

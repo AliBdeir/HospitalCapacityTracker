@@ -2157,10 +2157,17 @@
         },
         "runtime": {
           "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Globals/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Globals.dll": {}
         },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        "runtime": {
+          "bin/placeholder/Globals.dll": {}
+        }
       },
       "Localization/1.0.0": {
         "type": "project",
@@ -7464,6 +7471,11 @@
       "path": "../Data/Data.csproj",
       "msbuildProject": "../Data/Data.csproj"
     },
+    "Globals/1.0.0": {
+      "type": "project",
+      "path": "../Globals/Globals.csproj",
+      "msbuildProject": "../Globals/Globals.csproj"
+    },
     "Localization/1.0.0": {
       "type": "project",
       "path": "../ContentLocalization/Localization.csproj",
@@ -7473,6 +7485,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Data >= 1.0.0",
+      "Globals >= 1.0.0",
       "Localization >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.2",
@@ -7484,7 +7497,6 @@
   },
   "packageFolders": {
     "C:\\Users\\MSE\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -7497,13 +7509,11 @@
       "outputPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\HospitalBedSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\MSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7522,6 +7532,9 @@
             },
             "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj": {
               "projectPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Data\\Data.csproj"
+            },
+            "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Globals\\Globals.csproj": {
+              "projectPath": "C:\\Users\\MSE\\source\\repos\\BedSystemCorona\\Globals\\Globals.csproj"
             }
           }
         }
@@ -7581,7 +7594,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.20614.14\\RuntimeIdentifierGraph.json"
       }
     }
   }

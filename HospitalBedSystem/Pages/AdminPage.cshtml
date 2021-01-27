@@ -1,0 +1,25 @@
+﻿@page
+@inject IStringLocalizer<AdminPageModel> localizer
+@inject IHtmlLocalizer<AdminPageModel> htmlLocalizer;
+@inject CommonLocalizationService cLocalizer
+@using Microsoft.AspNetCore.Localization
+@using Localization.Services;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using HospitalBedTracker.Data.DataTypes;
+@using Localization;
+@using Globals;
+@model HospitalBedTracker.Pages.AdminPageModel
+@{
+    ViewData["Title"] = localizer["HomePage"];
+    var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+    RequestCulture requestCulture = requestCultureFeature.RequestCulture;
+    string[] supportedLanguages = Configuration.SupportedLanguages.Select(x => x.TwoLetterISOLanguageName).ToArray();
+}
+
+@section head{ }
+
+<div class="container">
+    
+</div>
+
+

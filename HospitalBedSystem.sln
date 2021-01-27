@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalBedTracker", "Hospi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localization", "ContentLocalization\Localization.csproj", "{372439B4-AE69-4F3A-B564-485AE28E309A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Globals", "Globals\Globals.csproj", "{CBA201D4-63DE-41EA-A8B6-1BCCE2B88D13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{9430F555-B268-47C7-A536-C9249160AE81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{372439B4-AE69-4F3A-B564-485AE28E309A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{372439B4-AE69-4F3A-B564-485AE28E309A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{372439B4-AE69-4F3A-B564-485AE28E309A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA201D4-63DE-41EA-A8B6-1BCCE2B88D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA201D4-63DE-41EA-A8B6-1BCCE2B88D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA201D4-63DE-41EA-A8B6-1BCCE2B88D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA201D4-63DE-41EA-A8B6-1BCCE2B88D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9430F555-B268-47C7-A536-C9249160AE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9430F555-B268-47C7-A536-C9249160AE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9430F555-B268-47C7-A536-C9249160AE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9430F555-B268-47C7-A536-C9249160AE81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

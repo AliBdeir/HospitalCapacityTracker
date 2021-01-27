@@ -1,0 +1,11 @@
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\bin\Debug\net5.0\Globals.deps.json
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\bin\Debug\net5.0\Globals.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\bin\Debug\net5.0\ref\Globals.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\bin\Debug\net5.0\Globals.pdb
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\Globals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\Globals.AssemblyInfoInputs.cache
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\Globals.AssemblyInfo.cs
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\Globals.csproj.CoreCompileInputs.cache
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\Globals.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\ref\Globals.dll
+C:\Users\MSE\source\repos\BedSystemCorona\Globals\obj\Debug\net5.0\Globals.pdb
