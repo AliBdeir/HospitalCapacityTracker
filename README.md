@@ -32,7 +32,7 @@ A localization-supported ASP.NET Core website that provides an easy way for webs
 Respective tables should be created in your database.
 
 ### Localizaiton
-The resource files are located in the `HospitalBedTracker` project under the `Resources` directory. The `CommonResources.[language].resx` files are strings not specific to a certain page, and can be found grouped under the `CommonResource.cs` in Visual Studio. The page-specific string resources can be foun under the `Pages` direcotory.
+The resource files are located in the `HospitalBedTracker` project under the `Resources` directory. The `CommonResources.[language].resx` files are strings not specific to a certain page, and can be found grouped under the `CommonResource.cs` in Visual Studio. The page-specific string resources can be found under the `Pages` directory.
 
 #### To Add a Language
 1. Add a new `CultureInfo` to the public static array in `Configuration.cs` in the `Globals` project.
@@ -43,7 +43,7 @@ The resource files are located in the `HospitalBedTracker` project under the `Re
 
     **Note 1:** For both steps 2 and 3, once you add a resource file, open it in Visual Studio and change the Access Modifier to Public. The dropdown is at the top ribbon.
 
-    **Note 2:** Both steps 2 and 3 will probably give you *resource file*-related errors in the Error List. Restarting visual studio should fix this, but you should be able to compile nonetheless.
+    **Note 2:** Both steps 2 and 3 will probably give you *resource file*-related errors in the Error List. Restarting Visual Studio should fix this, but you should be able to compile nonetheless.
 
 4. Add your translations!
 
