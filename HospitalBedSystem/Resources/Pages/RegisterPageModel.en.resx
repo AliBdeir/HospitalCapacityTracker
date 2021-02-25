@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GoogleMapsUrl" xml:space="preserve">
+    <value>Google Maps Url</value>
+  </data>
+  <data name="HospitalAddress" xml:space="preserve">
+    <value>Hospital Address</value>
+  </data>
   <data name="HospitalName" xml:space="preserve">
     <value>Hospital Name</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Image Url (Ends in .jpg / .png / .gif / etc.)</value>
   </data>
 </root>

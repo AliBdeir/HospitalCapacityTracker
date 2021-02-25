@@ -28,7 +28,7 @@ namespace HospitalBedTracker.Pages
             this.db = context;
         }
 
-        public async Task OnGetAsync() {
+        public void OnGet() {
             this.Hospitals = db.Hospitals
                 .Include(x => x.HospitalNames)
                 .Include(x => x.HospitalAddresses)

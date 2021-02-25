@@ -117,19 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddCategory" xml:space="preserve">
-    <value>Add Category</value>
-  </data>
   <data name="Current" xml:space="preserve">
     <value>Current</value>
   </data>
   <data name="Max" xml:space="preserve">
     <value>Max</value>
   </data>
-  <data name="RemoveCategory" xml:space="preserve">
-    <value>Remove Category</value>
-  </data>
   <data name="SectionName" xml:space="preserve">
     <value>Section Name</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Hospital Management</value>
   </data>
 </root>

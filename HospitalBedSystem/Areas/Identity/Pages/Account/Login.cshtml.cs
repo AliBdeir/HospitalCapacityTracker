@@ -18,15 +18,12 @@ namespace HospitalBedTracker.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LoginModel : PageModel
     {
-        private readonly UserManager<Hospital> _userManager;
         private readonly SignInManager<Hospital> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
         public LoginModel(SignInManager<Hospital> signInManager, 
-            ILogger<LoginModel> logger,
-            UserManager<Hospital> userManager)
+            ILogger<LoginModel> logger)
         {
-            _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
         }

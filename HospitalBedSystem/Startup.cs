@@ -5,11 +5,13 @@ using Localization.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 
@@ -47,14 +49,7 @@ namespace HospitalBedTracker
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
             services.AddSingleton<CommonLocalizationService>();
-            services.AddMvc().AddViewLocalization()/*.AddDataAnnotationsLocalization(options =>  TODO - Needed in the case of using Data Annotations.
-            {
-                options.DataAnnotationLocalizerProvider = (type, factory) =>
-                {
-                    var assemblyName = new AssemblyName(typeof(CommonResources).GetTypeInfo().Assembly.FullName);
-                    return factory.Create(nameof(CommonResources), assemblyName.Name);
-                };
-            })*/;
+            services.AddMvc().AddViewLocalization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

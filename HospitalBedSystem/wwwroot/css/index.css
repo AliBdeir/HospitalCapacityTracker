@@ -6,10 +6,12 @@
 .bedsBlock {
     text-align: center;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 img.cardImage {
-    width: 23rem;
+    height: 250px;
+    width: auto;
 }
 
 div.cardBodyMargined {
@@ -17,26 +19,20 @@ div.cardBodyMargined {
 }
 
 ul.bedsList {
+    width: 100%;
     overflow: auto;
 }
 
-h4.number {
-    line-height: 0.6rem;
-    display: inline;
+li.bedsList {
+    width: 100%;
+    padding: 0.2em;
 }
 
-.high-capacity {
-    color: green;
+li.list-group-item-none {
+    background-color: firebrick;
 }
 
-.medium-capacity {
-    color: orange;
-}
-
-.low-capacity {
-    color: firebrick;
-}
-
-.no-capacity {
-    color: red;
+.rtl-supported {
+    text-align: start;
+    unicode-bidi: plaintext;
 }

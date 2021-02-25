@@ -1,5 +1,3 @@
-C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\bin\Debug\net5.0\Localization.Views.dll
-C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\bin\Debug\net5.0\Localization.Views.pdb
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\bin\Debug\net5.0\appsettings.json
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\bin\Debug\net5.0\HospitalBedTracker.StaticWebAssets.xml
@@ -142,6 +140,8 @@ C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Hos
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.HospitalManagerPageModel.en.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.IndexModel.ar.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.IndexModel.en.resources
+C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.RegisterPageModel.ar.resources
+C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.RegisterPageModel.en.resources
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.csproj.GenerateResource.cache
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.AssemblyInfoInputs.cache
@@ -171,6 +171,7 @@ C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Raz
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\HospitalManagerPage.cshtml.g.cs
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\Shared\Components\CultureSwitcher\default.cshtml.g.cs
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -184,5 +185,3 @@ C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\Hos
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\ref\HospitalBedTracker.dll
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.pdb
 C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.genruntimeconfig.cache
-C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.RegisterPageModel.ar.resources
-C:\Users\MSE\source\repos\BedSystemCorona\HospitalBedSystem\obj\Debug\net5.0\HospitalBedTracker.Resources.Pages.RegisterPageModel.en.resources

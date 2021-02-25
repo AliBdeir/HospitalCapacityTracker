@@ -7,32 +7,29 @@
 @using Localization;
 @model IndexModel
 @{
-    ViewData["Title"] = localizer["HomePage"];
+    ViewData["Title"] = localizer["Title"];
     var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
     RequestCulture requestCulture = requestCultureFeature.RequestCulture;
     List<Hospital> hospitals = (List<Hospital>)ViewData["Hospitals"];
     string GetCapacityClass(int current, int max)
     {
         double occupation = (current / (double)max);
-        string result = "high";
-        if (occupation == 1 || occupation >= 0.75)
+        string result = "list-group-item-";
+        if (occupation == 1 || occupation >= 0.66)
         {
-            result = "high";
-        }
-        else if (occupation >= 0.66)
-        {
-            result = "medium";
+            result += "success";
         }
         else if (occupation >= 0.33)
         {
-            result = "low";
+            result += "warning";
         }
         else
         {
-            result = "no";
+            result += "danger";
         }
-        return result + "-capacity";
+        return result;
     }
+
 }
 @section head {
     <link href="~/css/index.css" rel="stylesheet" type="text/css" />
@@ -40,24 +37,27 @@
 <div>
     @foreach (var hospital in hospitals)
     {
-        <div class="card hospitalCard" style="max-width: 26rem;">
-            <img src="@hospital.HospitalImageUrl" class="card-img-top">
+        <div class="card hospitalCard">
+            <img src="@hospital.HospitalImageUrl" class="card-img-top cardImage">
             <div class="card-body cardBodyMargined">
-                <h5 class="card-title">@hospital.HospitalNames.LocalizationOrDefault(requestCulture)</h5>
-                <p class="card-text">@hospital.HospitalAddresses.LocalizationOrDefault(requestCulture)</p>
+                <h5 dir="auto" class="card-title rtl-supported">@hospital.HospitalNames.LocalizationOrDefault(requestCulture)</h5>
+                <p dir="auto" class="card-text rtl-supported">@hospital.HospitalAddresses.LocalizationOrDefault(requestCulture)</p>
                 <div class="bedsBlock">
-                    <ul class="list-group list-group-horizontal bedsList">
+                    <ul class="list-group list-group-horizontal bedsList ">
                         @foreach (HospitalBedSection item in hospital.HospitalBedSections)
                         {
                             var capacityClass = GetCapacityClass(item.CurrentOccupation, item.MaxCapacity);
-                            <li class="list-group-item">
-                                <h5 class="bedType @capacityClass">@(item.BedCategory.BedTypeNames.LocalizationOrDefault(requestCulture))</h5>
-                                <h4 class="number @capacityClass">@item.CurrentOccupation</h4> / <text class="@capacityClass">@item.MaxCapacity</text>
+                            <li class="list-group-item bedsList @capacityClass"
+                                @*style="width:@((1/(double)hospital.HospitalBedSections.Count) * 100)%"*@>
+                                <h5 class="bedType">@(item.BedCategory.BedTypeNames.LocalizationOrDefault(requestCulture))</h5>
+                                <h4 class="number">@item.CurrentOccupation</h4> / <text class="@capacityClass">@item.MaxCapacity</text>
                             </li>
                         }
                     </ul>
                 </div>
-                <a href="#" class="btn btn-primary">Open in Google Maps</a>
+                <div class="text-center">
+                    <a href="@hospital.GoogleMapsUrl" class="btn btn-primary submitButton">Open in Google Maps</a>
+                </div>
             </div>
         </div>
     }

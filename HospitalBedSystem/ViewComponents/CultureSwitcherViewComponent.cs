@@ -16,6 +16,8 @@ namespace Localization.ViewComponents
         public IViewComponentResult Invoke()
         {
             var cultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
+            HttpContext.Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+                $"c={cultureFeature.RequestCulture.UICulture}|uic={cultureFeature.RequestCulture.UICulture}");
             var model = new CultureSwitcherModel
             {
                 SupportedCultures = localizationOptions.Value.SupportedUICultures.ToList(),

@@ -14,6 +14,17 @@
     var requestCultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
     RequestCulture requestCulture = requestCultureFeature.RequestCulture;
     string[] supportedLanguages = Configuration.SupportedLanguages.Select(x => x.TwoLetterISOLanguageName).ToArray();
+    int colorIndex = -1;
+    string[] colors = { "beige", "antiquewhite", "aliceblue", "lightcyan", "blanchedalmond" };
+    string GetNextColor()
+    {
+        if (colorIndex >= colors.Length - 1)
+        {
+            colorIndex = -1;
+        }
+        colorIndex++;
+        return colors[colorIndex];
+    }
 }
 @section head{
     <link rel="stylesheet" href="~/css/hospitalManagerPage.css" />
@@ -27,7 +38,7 @@
             @for (int i = 0; i < 6; i++)
             {
                 HospitalBedSection value = sections.ElementAtOrDefault(i);
-                <div class="category">
+                <div class="category" style="background-color: @GetNextColor()">
                     @{int l = 0;}
                     @foreach (var lang in supportedLanguages)
                     {
@@ -46,7 +57,7 @@
                         <text>/</text>
                         <input min="1" step="1" class="occupation" id="capacity(@i)" type="number" placeholder="@localizer["Max"]"
                                name="NewSections[@i].MaxCapacity"
-                               value="@(value?.MaxCapacity)"/>
+                               value="@(value?.MaxCapacity)" />
                     </div>
                 </div>
                 <br />

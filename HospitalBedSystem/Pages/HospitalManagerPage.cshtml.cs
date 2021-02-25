@@ -40,12 +40,12 @@ namespace HospitalBedTracker.Pages
 
         public async Task<IActionResult> OnGet()
         {
-            var user = await userManager.GetUserAsync(HttpContext.User);
-            if (user?.Id == null || user.AdministratorAccount == false)
+            if (!User.Identity.IsAuthenticated)
             {
                 await new UnauthorizedResult().ExecuteResultAsync(PageContext);
                 return new ForbidResult();
             }
+            var user = await userManager.GetUserAsync(HttpContext.User);
             string userId = user.Id;
             logger.LogInformation("Retrieving current user ID...");
             logger.LogInformation($"Found hospital ID of {userId}");
